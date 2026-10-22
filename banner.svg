@@ -1,19 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" role="img" aria-labelledby="t d">
-  <title id="t">Swarup - Python</title>
-  <desc id="d">Name banner with a code snippet that types itself out beside a slowly moving signal wave.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
+  <title id="title">Swarup — Python, Backend and AI</title>
+  <desc id="desc">Animated developer banner with neon gradients, floating technology labels, a typing code editor and a moving data signal.</desc>
   <defs>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b8bbe"/><stop offset="1" stop-color="#ffd43b"/></linearGradient>
-    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#30363d" opacity=".55"/></pattern>
-    <clipPath id="card"><rect x="560" y="40" width="384" height="160" rx="10"/></clipPath>
-    <clipPath id="l1"><rect x="584" y="86" width="0" height="26"><animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;150;150;0;0" keyTimes="0;0.06;0.18;0.95;0.96;1"/></rect></clipPath>
-    <clipPath id="l2"><rect x="584" y="112" width="0" height="26"><animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;260;260;0;0" keyTimes="0;0.2;0.38;0.95;0.96;1"/></rect></clipPath>
-    <clipPath id="l3"><rect x="584" y="146" width="0" height="26"><animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;240;240;0;0" keyTimes="0;0.4;0.56;0.95;0.96;1"/></rect></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset=".55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#10101d"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset=".55" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#ffd43b"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#58a6ff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffd43b" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#8957e5" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#8957e5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#30363d" stroke-width=".7" opacity=".55"/>
+    </pattern>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="editorClip"><rect x="548" y="42" width="398" height="176" rx="13"/></clipPath>
+    <clipPath id="type1"><rect x="574" y="91" width="0" height="22"><animate attributeName="width" dur="9s" repeatCount="indefinite" values="0;0;195;195;0" keyTimes="0;.08;.24;.88;1"/></rect></clipPath>
+    <clipPath id="type2"><rect x="574" y="121" width="0" height="22"><animate attributeName="width" dur="9s" repeatCount="indefinite" values="0;0;280;280;0" keyTimes="0;.24;.43;.88;1"/></rect></clipPath>
+    <clipPath id="type3"><rect x="574" y="151" width="0" height="22"><animate attributeName="width" dur="9s" repeatCount="indefinite" values="0;0;245;245;0" keyTimes="0;.43;.61;.88;1"/></rect></clipPath>
   </defs>
-  <rect width="1000" height="240" rx="14" fill="#0d1117"/><rect width="1000" height="240" rx="14" fill="url(#dots)"/><rect x=".5" y=".5" width="999" height="239" rx="13.5" fill="none" stroke="#30363d"/>
-  <g><rect x="56" y="74" width="44" height="4" rx="2" fill="url(#accent)"/><text x="56" y="128" fill="#e6edf3" font-family="Arial,Helvetica,sans-serif" font-size="52" font-weight="700" letter-spacing="-1">Swarup</text><text x="58" y="160" fill="#8b949e" font-family="Arial,Helvetica,sans-serif" font-size="18">Engineering student. Building in Python.</text></g>
-  <rect x="560" y="40" width="384" height="160" rx="10" fill="#161b22" stroke="#30363d"/><path d="M560 70H944" stroke="#30363d"/><circle cx="580" cy="55" r="4" fill="#484f58"/><circle cx="595" cy="55" r="4" fill="#484f58"/><circle cx="610" cy="55" r="4" fill="#484f58"/><text x="630" y="59" fill="#6e7681" font-family="monospace" font-size="11">main.py</text>
-  <g clip-path="url(#card)">
-    <g fill="none" stroke-linecap="round"><g><animateTransform attributeName="transform" type="translate" from="0 0" to="-80 0" dur="5s" repeatCount="indefinite"/><path stroke="#4b8bbe" stroke-width="1.6" opacity=".55" d="M480 186 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/></g><g><animateTransform attributeName="transform" type="translate" from="0 0" to="-80 0" dur="8s" repeatCount="indefinite"/><path stroke="#ffd43b" stroke-width="1.2" opacity=".25" d="M480 186 q20 8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/></g></g>
-    <g font-family="monospace" font-size="15"><g clip-path="url(#l1)"><text x="584" y="104"><tspan fill="#ff7b72">def</tspan><tspan fill="#d2a8ff"> build</tspan><tspan fill="#c9d1d9">(idea):</tspan></text></g><g clip-path="url(#l2)"><text x="584" y="130" xml:space="preserve"><tspan fill="#ff7b72">    return</tspan><tspan fill="#c9d1d9"> ship(test(idea))</tspan></text></g><g clip-path="url(#l3)"><text x="584" y="164"><tspan fill="#c9d1d9">build(</tspan><tspan fill="#a5d6ff">"something useful"</tspan><tspan fill="#c9d1d9">)</tspan></text></g><g><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.56;0.57;0.9;0.94;1"/><rect x="814" y="150" width="8" height="17" fill="#e6edf3"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.5;0.5;1;1" dur="1.1s" repeatCount="indefinite"/></rect></g></g>
+
+  <rect width="1000" height="260" rx="18" fill="url(#bg)"/>
+  <rect width="1000" height="260" rx="18" fill="url(#grid)"/>
+  <ellipse cx="220" cy="115" rx="330" ry="230" fill="url(#glow)"/>
+  <ellipse cx="830" cy="160" rx="300" ry="200" fill="url(#glow)" opacity=".65"/>
+  <rect x=".7" y=".7" width="998.6" height="258.6" rx="17.3" fill="none" stroke="#3b4352"/>
+  <rect x="0" y="0" width="1000" height="3" rx="1.5" fill="url(#neon)"/>
+  <rect y="0" width="1000" height="260" fill="url(#shine)" opacity=".4">
+    <animate attributeName="y" values="-280;280;-280" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Ambient animated particles -->
+  <g fill="#58a6ff" filter="url(#softGlow)">
+    <circle cx="470" cy="42" r="2"><animate attributeName="cy" values="42;55;42" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="505" cy="208" r="1.8"><animate attributeName="cy" values="208;195;208" dur="4.6s" repeatCount="indefinite"/></circle>
+    <circle cx="958" cy="34" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="514" cy="77" r="1.5"><animate attributeName="opacity" values="1;.2;1" dur="3s" repeatCount="indefinite"/></circle>
   </g>
+  <g fill="#ffd43b">
+    <circle cx="505" cy="56" r="1.8"><animate attributeName="cy" values="56;68;56" dur="4.2s" repeatCount="indefinite"/></circle>
+    <circle cx="525" cy="188" r="1.5"><animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Name and intro -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="58" y="61" width="50" height="4" rx="2" fill="url(#neon)">
+      <animate attributeName="width" values="18;50;18" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="56" y="119" fill="#f0f6fc" font-size="55" font-weight="700" letter-spacing="-1.6">Swarup</text>
+    <text x="58" y="151" fill="#b1bac4" font-size="17">Engineering graduate <tspan fill="#58a6ff">·</tspan> Python developer</text>
+    <text x="58" y="177" fill="#8b949e" font-size="14">Building backend services and AI applications.</text>
+    <text x="58" y="220" fill="#8b949e" font-family="monospace" font-size="12">$ keep_learning()<tspan fill="#ffd43b">_</tspan>
+      <animate attributeName="opacity" values="1;.55;1" dur="1.5s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Floating tech pills -->
+  <g font-family="monospace" font-size="11" font-weight="600">
+    <g>
+      <rect x="58" y="190" width="72" height="23" rx="11.5" fill="#17283a" stroke="#315b7f"/>
+      <text x="94" y="205" fill="#79c0ff" text-anchor="middle">PYTHON</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <rect x="139" y="190" width="75" height="23" rx="11.5" fill="#172b2b" stroke="#276b63"/>
+      <text x="176.5" y="205" fill="#7ee787" text-anchor="middle">FASTAPI</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="4.5s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <rect x="223" y="190" width="82" height="23" rx="11.5" fill="#2a2340" stroke="#6651a5"/>
+      <text x="264" y="205" fill="#d2a8ff" text-anchor="middle">GEN AI / RAG</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="3.6s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Glowing orbit accent -->
+  <g fill="none" stroke="url(#neon)" opacity=".48">
+    <ellipse cx="472" cy="131" rx="25" ry="76" transform="rotate(25 472 131)" stroke-dasharray="3 8">
+      <animateTransform attributeName="transform" type="rotate" from="0 472 131" to="360 472 131" dur="24s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <circle cx="472" cy="55" r="3" fill="#ffd43b" filter="url(#softGlow)">
+    <animate attributeName="cy" values="55;207;55" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;.3;1" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated code editor -->
+  <rect x="548" y="42" width="398" height="176" rx="13" fill="#0d1117" stroke="#465063"/>
+  <path d="M548 76H946" stroke="#30363d"/>
+  <g>
+    <circle cx="568" cy="59" r="4" fill="#ff7b72"/>
+    <circle cx="583" cy="59" r="4" fill="#ffd43b"/>
+    <circle cx="598" cy="59" r="4" fill="#3fb950"/>
+    <text x="621" y="63" fill="#8b949e" font-family="monospace" font-size="11">swarup.py</text>
+    <rect x="895" y="51" width="37" height="16" rx="8" fill="#18372a" stroke="#276749"/>
+    <text x="913.5" y="62" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="9">LIVE</text>
+    <circle cx="929" cy="59" r="2" fill="#3fb950">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g clip-path="url(#editorClip)">
+    <g font-family="monospace" font-size="14">
+      <text x="574" y="105" fill="#ff7b72">def</text>
+      <text x="607" y="105" fill="#d2a8ff"> build</text>
+      <text x="661" y="105" fill="#c9d1d9">(idea):</text>
+      <g clip-path="url(#type1)"><rect x="574" y="86" width="350" height="23" fill="#0d1117"/><text x="574" y="105"><tspan fill="#ff7b72">def</tspan><tspan fill="#d2a8ff"> build</tspan><tspan fill="#c9d1d9">(idea):</tspan></text></g>
+
+      <text x="574" y="135" fill="#8b949e">01</text>
+      <text x="600" y="135" fill="#ff7b72">return</text>
+      <text x="655" y="135" fill="#c9d1d9">ship(test(idea))</text>
+      <g clip-path="url(#type2)"><rect x="574" y="116" width="350" height="23" fill="#0d1117"/><text x="574" y="135"><tspan fill="#8b949e">01 </tspan><tspan fill="#ff7b72">return</tspan><tspan fill="#c9d1d9"> ship(test(idea))</tspan></text></g>
+
+      <text x="574" y="165" fill="#8b949e">02</text>
+      <text x="600" y="165" fill="#c9d1d9">build(</text>
+      <text x="651" y="165" fill="#a5d6ff">"something useful"</text>
+      <text x="796" y="165" fill="#c9d1d9">)</text>
+      <g clip-path="url(#type3)"><rect x="574" y="146" width="350" height="23" fill="#0d1117"/><text x="574" y="165"><tspan fill="#8b949e">02 </tspan><tspan fill="#c9d1d9">build(</tspan><tspan fill="#a5d6ff">"something useful"</tspan><tspan fill="#c9d1d9">)</tspan></text></g>
+    </g>
+    <rect x="574" y="181" width="345" height="22" rx="5" fill="#161b22"/>
+    <path d="M586 192l4 4 7 -8" fill="none" stroke="#3fb950" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="606" y="196" fill="#7ee787" font-family="monospace" font-size="10">build status: learning in progress</text>
+    <rect x="911" y="183" width="2" height="16" fill="#ffd43b">
+      <animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Scanning beam -->
+    <rect x="549" y="77" width="396" height="2" fill="url(#neon)" opacity=".55">
+      <animate attributeName="y" values="78;211;78" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Data stream under the editor -->
+  <path d="M555 235 Q570 220 585 235 T615 235 T645 235 T675 235 T705 235 T735 235 T765 235 T795 235 T825 235 T855 235 T885 235 T915 235 T945 235" fill="none" stroke="#58a6ff" stroke-width="1.5" opacity=".55" stroke-dasharray="4 7">
+    <animate attributeName="stroke-dashoffset" values="0;-44" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="555" cy="235" r="2.5" fill="#58a6ff" filter="url(#softGlow)">
+    <animate attributeName="cx" values="555;945;555" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="945" cy="235" r="2.5" fill="#ffd43b" filter="url(#softGlow)">
+    <animate attributeName="cx" values="945;555;945" dur="6s" repeatCount="indefinite"/>
+  </circle>
 </svg>
