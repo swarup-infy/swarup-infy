@@ -12,11 +12,6 @@
 
 </div>
 
-<!-- Magical wandering snake animation -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/swarup-infy/swarup-infy/main/magical-snake.svg" alt="Animated emerald magical snake wandering through an enchanted path" width="100%" />
-</p>
-
 ---
 
 ## `whoami`
