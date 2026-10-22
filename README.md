@@ -1,20 +1,20 @@
 <p align="center">
-  <img src="banner.svg" alt="Swarup Kar Chaudhuri — Python developer" width="100%">
+  <img src="banner.svg" alt="Swarup Kar Chaudhuri" width="100%">
 </p>
 
-I'm an electrical engineering graduate building backend services and applications powered by language models. I work primarily with Python and FastAPI, and I'm developing my understanding of PostgreSQL, embeddings, and retrieval-augmented generation (RAG).
+I'm an electrical engineering student building backend services and applications on top of language models. Most of my work is with Python and FastAPI, and I'm learning how retrieval-augmented generation (RAG) behaves beyond tutorials.
 
 ## Project
 
 **[AI Document Assistant](https://github.com/swarup-infy/AI-DOC-Assistant)**
 
-A document Q&A application focused on document ingestion, text extraction, and a backend foundation for retrieval-augmented answers.
+A backend-first application for document ingestion, text extraction, and question answering with retrieval-augmented generation.
 
-**Stack:** Python · FastAPI · SQLAlchemy · PostgreSQL · ChromaDB · LLM APIs
+**Stack:** Python · FastAPI · PostgreSQL · SQLAlchemy · ChromaDB · LLM APIs
 
 ## Stack
 
-| Area | Tools and technologies |
+| Area | Technologies |
 |:--|:--|
 | Languages | Python, JavaScript |
 | Backend | FastAPI, SQLAlchemy, REST APIs |
@@ -31,5 +31,4 @@ A document Q&A application focused on document ingestion, text extraction, and a
 
 ## Contact
 
-- GitHub: [@swarup-infy](https://github.com/swarup-infy)
-
+GitHub: [@swarup-infy](https://github.com/swarup-infy)
