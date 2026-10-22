@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.svg" alt="Swarup Kar Chaudhuri" width="100%">
+  <img src="https://raw.githubusercontent.com/swarup-infy/swarup-infy/main/banner.svg" alt="Swarup Kar Chaudhuri — animated Python and AI banner" width="100%">
 </p>
 
 <h3 align="center">Electrical Engineering Graduate | Aspiring Python Backend & AI Engineer</h3>
