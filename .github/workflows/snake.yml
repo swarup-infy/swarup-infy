@@ -23,6 +23,9 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Tune snake speed
+        run: python .github/scripts/retime_snake.py
+
       - name: Publish snake
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
