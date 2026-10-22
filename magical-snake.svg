@@ -1,62 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" role="img" aria-labelledby="title desc">
-<title id="title">Python in Motion</title>
-<desc id="desc">A dark developer terminal with Python code, glowing blue and yellow Python-inspired shapes, floating code symbols, and a moving cursor.</desc>
-<defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071321"/><stop offset=".55" stop-color="#101827"/><stop offset="1" stop-color="#17112b"/></linearGradient>
-  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55c8ff"/><stop offset="1" stop-color="#2875d7"/></linearGradient>
-  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe873"/><stop offset="1" stop-color="#f2a900"/></linearGradient>
-  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <clipPath id="clip"><rect width="1000" height="240" rx="16"/></clipPath>
-</defs>
-<g clip-path="url(#clip)">
-  <rect width="1000" height="240" fill="url(#bg)"/>
-  <g stroke="#6aa6d9" stroke-width="1" opacity=".12">
-    <path d="M0 32H1000M0 64H1000M0 96H1000M0 128H1000M0 160H1000M0 192H1000M0 224H1000"/>
-    <path d="M32 0V240M64 0V240M96 0V240M128 0V240M160 0V240M192 0V240M224 0V240M256 0V240M288 0V240M320 0V240M352 0V240M384 0V240M416 0V240M448 0V240M480 0V240M512 0V240M544 0V240M576 0V240M608 0V240M640 0V240M672 0V240M704 0V240M736 0V240M768 0V240M800 0V240M832 0V240M864 0V240M896 0V240M928 0V240M960 0V240"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" role="img" aria-labelledby="t d">
+  <title id="t">Swarup - Python</title>
+  <desc id="d">Name banner with a code snippet that types itself out beside a slowly moving signal wave.</desc>
+
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4b8bbe"/>
+      <stop offset="1" stop-color="#ffd43b"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#30363d" opacity=".55"/>
+    </pattern>
+    <clipPath id="card"><rect x="560" y="40" width="384" height="160" rx="10"/></clipPath>
+    <clipPath id="l1"><rect x="584" y="86" width="0" height="26"><animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;150;150;0;0" keyTimes="0;0.06;0.18;0.95;0.96;1"/></rect></clipPath>
+    <clipPath id="l2"><rect x="584" y="112" width="0" height="26"><animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;260;260;0;0" keyTimes="0;0.2;0.38;0.95;0.96;1"/></rect></clipPath>
+    <clipPath id="l3"><rect x="584" y="146" width="0" height="26"><animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;240;240;0;0" keyTimes="0;0.4;0.56;0.95;0.96;1"/></rect></clipPath>
+  </defs>
+
+  <rect width="1000" height="240" rx="14" fill="#0d1117"/>
+  <rect width="1000" height="240" rx="14" fill="url(#dots)"/>
+  <rect x=".5" y=".5" width="999" height="239" rx="13.5" fill="none" stroke="#30363d"/>
+
+  <g>
+    <animate attributeName="opacity" from="0" to="1" dur="0.9s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.9s" fill="freeze"/>
+    <rect x="56" y="74" width="44" height="4" rx="2" fill="url(#accent)"/>
+    <text x="56" y="128" fill="#e6edf3" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="52" font-weight="700" letter-spacing="-1">Swarup</text>
+    <text x="58" y="160" fill="#8b949e" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18">Engineering student. Building in Python.</text>
   </g>
-  <g fill="#70c9ff" opacity=".8" font-family="monospace" font-size="12">
-    <text x="64" y="58">&lt;python&gt;</text><text x="823" y="64"># build something</text><text x="70" y="205">import imagination</text>
-    <text x="830" y="202">0 1 0 1 1 0</text>
+
+  <rect x="560" y="40" width="384" height="160" rx="10" fill="#161b22" stroke="#30363d"/>
+  <path d="M560 70H944" stroke="#30363d"/>
+  <circle cx="580" cy="55" r="4" fill="#484f58"/>
+  <circle cx="595" cy="55" r="4" fill="#484f58"/>
+  <circle cx="610" cy="55" r="4" fill="#484f58"/>
+  <text x="630" y="59" fill="#6e7681" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11">main.py</text>
+
+  <g clip-path="url(#card)">
+    <g fill="none" stroke-linecap="round">
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-80 0" dur="5s" repeatCount="indefinite"/>
+        <path stroke="#4b8bbe" stroke-width="1.6" opacity=".55" d="M480 186 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-80 0" dur="8s" repeatCount="indefinite"/>
+        <path stroke="#ffd43b" stroke-width="1.2" opacity=".25" d="M480 186 q20 8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+      </g>
+    </g>
+
+    <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15">
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="1;1;0;0;1" keyTimes="0;0.9;0.94;0.99;1"/>
+      <g clip-path="url(#l1)">
+        <text x="584" y="104"><tspan fill="#ff7b72">def</tspan><tspan fill="#d2a8ff"> build</tspan><tspan fill="#c9d1d9">(idea):</tspan></text>
+      </g>
+      <g clip-path="url(#l2)">
+        <text x="584" y="130" xml:space="preserve"><tspan fill="#ff7b72">    return</tspan><tspan fill="#c9d1d9"> ship(test(idea))</tspan></text>
+      </g>
+      <g clip-path="url(#l3)">
+        <text x="584" y="164"><tspan fill="#c9d1d9">build(</tspan><tspan fill="#a5d6ff">"something useful"</tspan><tspan fill="#c9d1d9">)</tspan></text>
+      </g>
+      <g>
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.56;0.57;0.9;0.94;1"/>
+        <rect x="814" y="150" width="8" height="17" fill="#e6edf3">
+          <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.5;0.5;1;1" dur="1.1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
   </g>
-  <g transform="translate(90 80)" filter="url(#glow)">
-    <path d="M20 0H78Q104 0 104 26V43H53Q35 43 35 61V78H20Q0 78 0 58V23Q0 0 20 0Z" fill="url(#blue)"/>
-    <circle cx="25" cy="17" r="4" fill="#f4fbff"/>
-    <path d="M84 82H26Q0 82 0 108V125H51Q69 125 69 107V90H84Q104 90 104 110V75Q104 82 84 82Z" fill="url(#gold)" transform="translate(0 -1)"/>
-    <circle cx="78" cy="108" r="4" fill="#fff9d9"/>
-  </g>
-  <text x="238" y="43" fill="#8eb8d8" font-family="monospace" font-size="11" letter-spacing="2">SWARUP-IN PYTHON LAB</text>
-  <rect x="226" y="56" width="720" height="128" rx="10" fill="#0a111d" stroke="#2a4057" stroke-width="1.2"/>
-  <path d="M226 83H946" stroke="#26384b"/>
-  <circle cx="246" cy="70" r="4" fill="#ff6b6b"/><circle cx="261" cy="70" r="4" fill="#ffd166"/><circle cx="276" cy="70" r="4" fill="#06d6a0"/>
-  <text x="294" y="74" fill="#8fa5ba" font-family="monospace" font-size="10">main.py — Python</text>
-  <g font-family="monospace" font-size="14">
-    <text x="246" y="108" fill="#c792ea">def</text><text x="278" y="108" fill="#82aaff"> build_future</text><text x="385" y="108" fill="#d7e3f4">():</text>
-    <text x="266" y="132" fill="#c792ea">    return</text><text x="343" y="132" fill="#c3e88d"> "ideas" + "code"</text>
-    <text x="246" y="157" fill="#89ddff">print</text><text x="285" y="157" fill="#d7e3f4">(build_future())</text>
-    <rect x="416" y="145" width="8" height="16" rx="1" fill="#f5c451" filter="url(#glow)">
-      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.2s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g fill="none" stroke-width="2" stroke-linecap="round" opacity=".9">
-    <path d="M685 203q16-22 32 0t32 0t32 0t32 0t32 0" stroke="#4cb7ff" stroke-dasharray="7 8">
-      <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="3s" repeatCount="indefinite"/>
-    </path>
-    <path d="M690 214q16-15 32 0t32 0t32 0t32 0t32 0" stroke="#ffd34e" stroke-dasharray="5 10">
-      <animate attributeName="stroke-dashoffset" from="0" to="60" dur="4s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  <g font-family="monospace" font-weight="bold" font-size="18" filter="url(#glow)">
-    <text x="542" y="38" fill="#f7cb55"> { }</text>
-    <text x="602" y="216" fill="#56c7ff">[ ]</text>
-    <text x="912" y="132" fill="#f7cb55">&lt;/&gt;</text>
-    <text x="45" y="146" fill="#57c6ff">Py</text>
-  </g>
-  <g fill="#7bd8ff">
-    <circle cx="520" cy="202" r="2"><animate attributeName="cy" values="202;188;202" dur="3s" repeatCount="indefinite"/></circle>
-    <circle cx="575" cy="48" r="2"><animate attributeName="cy" values="48;37;48" dur="2.6s" repeatCount="indefinite"/></circle>
-    <circle cx="965" cy="92" r="2"><animate attributeName="cy" values="92;78;92" dur="3.4s" repeatCount="indefinite"/></circle>
-  </g>
-  <text x="30" y="25" fill="#dcecff" font-family="monospace" font-size="10" letter-spacing="2">PYTHON • CREATE • REPEAT</text>
-  <text x="970" y="25" text-anchor="end" fill="#8fa5ba" font-family="monospace" font-size="10">RUNNING ON CURIOSITY ✦</text>
-</g>
 </svg>
