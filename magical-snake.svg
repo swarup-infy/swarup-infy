@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="220" viewBox="0 0 1000 220" role="img" aria-labelledby="title desc">
+  <title id="title">The Enchanted Path</title>
+  <desc id="desc">An emerald snake travels along a glowing, wavy path through a night sky.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b1b"/>
+      <stop offset="0.52" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#17112a"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#164e3c"/>
+      <stop offset="0.5" stop-color="#206548"/>
+      <stop offset="1" stop-color="#2ee59d"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip"><rect width="1000" height="220" rx="16"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1000" height="220" fill="url(#bg)"/>
+    <g fill="#8be9c1" opacity=".45">
+      <circle cx="49" cy="40" r="1.2"/><circle cx="112" cy="92" r="1.2"/><circle cx="190" cy="21" r="1"/>
+      <circle cx="274" cy="60" r="1.2"/><circle cx="355" cy="30" r="1"/><circle cx="432" cy="82" r="1.3"/>
+      <circle cx="503" cy="18" r="1"/><circle cx="591" cy="47" r="1.2"/><circle cx="670" cy="22" r="1"/>
+      <circle cx="745" cy="75" r="1.2"/><circle cx="831" cy="32" r="1"/><circle cx="919" cy="83" r="1.2"/>
+      <circle cx="963" cy="22" r="1"/>
+    </g>
+    <g stroke="#42c995" stroke-width="1.4" opacity=".28">
+      <path d="M70 68v8m-4-4h8M335 48v8m-4-4h8M640 62v8m-4-4h8M850 101v8m-4-4h8M930 28v8m-4-4h8"/>
+    </g>
+    <path d="M-25 128 C75 40 120 16 205 110 S330 220 420 104 S555 8 642 100 S775 199 862 93 S960 30 1025 112"
+      fill="none" stroke="#123d32" stroke-width="14" opacity=".95"/>
+    <path d="M-25 128 C75 40 120 16 205 110 S330 220 420 104 S555 8 642 100 S775 199 862 93 S960 30 1025 112"
+      fill="none" stroke="url(#path)" stroke-width="7" opacity=".7"/>
+    <path d="M-25 128 C75 40 120 16 205 110 S330 220 420 104 S555 8 642 100 S775 199 862 93 S960 30 1025 112"
+      fill="none" stroke="#26744e" stroke-width="1.5" opacity=".9"/>
+    <path d="M705 154 q10 6 19 9" fill="none" stroke="#78ffbd" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="110" cy="49" r="2.7" fill="#9cefc8" filter="url(#glow)"/>
+    <g fill="#b7a2ff" opacity=".75">
+      <path d="M155 163l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+      <path d="M735 54l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"/>
+      <path d="M900 176l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+    </g>
+    <g transform="translate(968 48) rotate(-24)" filter="url(#glow)">
+      <ellipse cx="0" cy="0" rx="14" ry="10" fill="#25c982" stroke="#9effcc" stroke-width="1.4"/>
+      <path d="M8 -4 Q19 -5 22 4 L13 5 Z" fill="#31e69a" stroke="#b4ffd8" stroke-width="1"/>
+      <circle cx="17" cy="0" r="1.4" fill="#071b15"/>
+      <path d="M22 4l10 9-4-12" fill="#9effcc"/>
+    </g>
+    <text x="26" y="34" fill="#b8e7d0" font-family="Georgia,serif" font-size="13" font-weight="bold" letter-spacing="3">THE ENCHANTED PATH</text>
+    <text x="974" y="34" text-anchor="end" fill="#b8a8ee" font-family="monospace" font-size="9" font-weight="bold">MAGIC IN MOTION ✦</text>
+    <text x="26" y="198" fill="#77bda0" font-family="monospace" font-size="9" letter-spacing="2">SILENTLY SLITHERING THROUGH THE CODE</text>
+    <text x="974" y="198" text-anchor="end" fill="#77bda0" font-family="monospace" font-size="9">✦ SLITHERIN ENERGY ✦</text>
+  </g>
+</svg>
