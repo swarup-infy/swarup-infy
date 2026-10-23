@@ -54,6 +54,6 @@
 <g><rect x="884" y="164" width="82" height="24" rx="12" fill="#134045" stroke="#405F4F"/><text class="mono" x="925" y="180" fill="#EFEBD6" font-size="9" text-anchor="middle">LLM / RAG</text><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="4.7s" repeatCount="indefinite"/></g>
 <rect x="628" y="201" width="318" height="36" rx="8" fill="#001F31" stroke="#405F4F"/>
 <circle cx="643" cy="213" r="3" fill="#ff7b72"/><circle cx="653" cy="213" r="3" fill="#d5cb73"/><circle cx="663" cy="213" r="3" fill="#D5CB73"/>
-<text class="mono" x="678" y="216" fill="#7b9e9b" font-size="9">main.py</text><text class="mono" x="643" y="229" fill="#b6d8d2" font-size="10">build(</text><text class="mono" x="679" y="229" fill="#EFEBD6" font-size="10">"something useful"</text><text class="mono" x="801" y="229" fill="#b6d8d2" font-size="10">)</text><rect class="cursor" x="810" y="220" width="2" height="12" rx="1" fill="#d5cb73"/>
+<text class="mono" x="678" y="216" fill="#001F31" font-size="9">main.py</text><text class="mono" x="643" y="229" fill="#001F31" font-size="10">build(</text><text class="mono" x="679" y="229" fill="#EFEBD6" font-size="10">"something useful"</text><text class="mono" x="801" y="229" fill="#001F31" font-size="10">)</text><rect class="cursor" x="810" y="220" width="2" height="12" rx="1" fill="#d5cb73"/>
 <rect x=".5" y=".5" width="999" height="259" rx="15.5" fill="none" stroke="#405F4F" opacity=".8"/>
 </g></svg>
