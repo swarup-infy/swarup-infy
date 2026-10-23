@@ -1,142 +1,198 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
-  <title id="title">Swarup Kar Chaudhuri — Python Developer</title>
-  <desc id="desc">Banner with an animated name, a short description and the technologies Python, FastAPI and GenAI.</desc>
+  <title id="title">Swarup Kar Chaudhuri — Python, Backend and AI Developer</title>
+  <desc id="desc">Animated profile banner with a staggered name reveal, moving text accents, and a compact two-dimensional AI solar system with orbiting Python, LLM, RAG, ML and GenAI nodes.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#001F31"/>
-      <stop offset=".5" stop-color="#001F31"/>
+      <stop offset=".62" stop-color="#001F31"/>
       <stop offset="1" stop-color="#134045"/>
     </linearGradient>
-    <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="740" y2="0">
+    <linearGradient id="line" x1="60" y1="0" x2="740" y2="0">
       <stop offset="0" stop-color="#D5CB73"/>
-      <stop offset="1" stop-color="#B47F56"/>
+      <stop offset=".52" stop-color="#B47F56"/>
+      <stop offset="1" stop-color="#D5CB73"/>
     </linearGradient>
+    <radialGradient id="aiCore">
+      <stop offset="0" stop-color="#405F4F"/>
+      <stop offset=".7" stop-color="#134045"/>
+      <stop offset="1" stop-color="#001F31"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#405F4F" stroke-width=".5" opacity=".24"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <clipPath id="card"><rect width="1000" height="260" rx="16"/></clipPath>
   </defs>
 
   <style>
-    .sans { font-family: 'Inter','Segoe UI',Helvetica,Arial,sans-serif; }
-    .mono { font-family: 'JetBrains Mono','SF Mono','Fira Code',Consolas,'Courier New',monospace; }
-
-    .letter {
-      font-size: 46px;
-      font-weight: 700;
-      text-anchor: middle;
-      fill: #EFEBD6;
-      opacity: 0;
-      animation:
-        rise .8s cubic-bezier(.2,.8,.2,1) forwards,
-        wave 8s ease-in-out infinite;
-      animation-delay:
-        calc(.3s + var(--i) * .05s),
-        calc(2.6s + var(--i) * .08s);
+    .sans{font-family:Inter,'Segoe UI',Helvetica,Arial,sans-serif}
+    .mono{font-family:'JetBrains Mono','SF Mono',Consolas,monospace}
+    .letter{
+      font-size:39px;font-weight:700;text-anchor:middle;fill:#EFEBD6;opacity:0;
+      animation:rise .75s cubic-bezier(.2,.8,.2,1) forwards, shimmer 7s ease-in-out infinite;
+      animation-delay:calc(.18s + var(--i)*.045s),calc(1.7s + var(--i)*.09s)
     }
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes wave {
-      0%   { fill: #EFEBD6; }
-      5%   { fill: #D5CB73; }
-      12%  { fill: #EFEBD6; }
-      100% { fill: #EFEBD6; }
-    }
-
-    .underline {
-      stroke-dasharray: 1;
-      stroke-dashoffset: 1;
-      animation: draw 1.2s ease-out 1.4s forwards;
-    }
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-
-    .fade { opacity: 0; animation: fadeIn .8s ease-out forwards; }
-    @keyframes fadeIn { to { opacity: 1; } }
-
-    .orbit { transform-origin: 890px 130px; animation: spin 30s linear infinite; }
-    .orbit-rev { transform-origin: 890px 130px; animation: spin 46s linear infinite reverse; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    @media (prefers-reduced-motion: reduce) {
-      .letter, .underline, .fade, .orbit, .orbit-rev { animation: none; opacity: 1; stroke-dashoffset: 0; }
+    @keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes shimmer{0%,84%,100%{fill:#EFEBD6}5%{fill:#D5CB73}12%{fill:#B47F56}}
+    .fade{opacity:0;animation:fadeIn .8s ease-out forwards}
+    @keyframes fadeIn{to{opacity:1}}
+    .underline{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.2s ease-out 1.4s forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .orbitA{transform-origin:870px 130px;animation:spinA 13s linear infinite}
+    .orbitB{transform-origin:870px 130px;animation:spinB 19s linear infinite}
+    .orbitC{transform-origin:870px 130px;animation:spinA 27s linear infinite}
+    @keyframes spinA{to{transform:rotate(360deg)}}
+    @keyframes spinB{to{transform:rotate(-360deg)}}
+    .pulse{animation:pulse 2.8s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.72}50%{opacity:1}}
+    .float1{animation:float 3.6s ease-in-out infinite}
+    .float2{animation:float 4.2s ease-in-out infinite .5s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    .blink{animation:blink 1s steps(2,end) infinite}
+    @keyframes blink{50%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none!important}
+      .letter,.fade{opacity:1!important}
+      .underline{stroke-dashoffset:0}
     }
   </style>
 
   <g clip-path="url(#card)">
     <rect width="1000" height="260" fill="url(#bg)"/>
+    <rect width="1000" height="260" fill="url(#grid)"/>
+    <rect width="1000" height="3" fill="url(#line)"/>
 
-    <!-- Quiet geometric accent on the right -->
-    <g fill="none" stroke="#405F4F">
-      <circle cx="890" cy="130" r="48" opacity=".55"/>
-      <circle cx="890" cy="130" r="88" opacity=".4"/>
-      <circle cx="890" cy="130" r="128" opacity=".25"/>
-    </g>
-    <g class="orbit">
-      <circle cx="978" cy="130" r="4" fill="#D5CB73"/>
-    </g>
-    <g class="orbit-rev">
-      <circle cx="890" cy="42" r="3" fill="#B47F56"/>
+    <!-- Quiet animated stars, restricted to the chosen palette -->
+    <g fill="#D5CB73">
+      <circle cx="28" cy="28" r="1.4" opacity=".65"><animate attributeName="opacity" values=".2;.8;.2" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="520" cy="32" r="1.2" opacity=".55"><animate attributeName="opacity" values=".2;.9;.2" dur="2.7s" repeatCount="indefinite"/></circle>
+      <circle cx="742" cy="38" r="1.3" opacity=".6"><animate attributeName="opacity" values=".15;.8;.15" dur="3.8s" repeatCount="indefinite"/></circle>
+      <circle cx="976" cy="224" r="1.4" opacity=".55"><animate attributeName="opacity" values=".2;.8;.2" dur="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="406" cy="236" r="1.2" opacity=".5"><animate attributeName="opacity" values=".15;.75;.15" dur="3.5s" repeatCount="indefinite"/></circle>
     </g>
 
-    <!-- Eyebrow -->
-    <text class="sans fade" x="60" y="64" fill="#B47F56" font-size="12" font-weight="600" letter-spacing="3.5" style="animation-delay:.1s">
-      ENGINEERING GRADUATE  /  PYTHON DEVELOPER
+    <!-- Intro line -->
+    <text class="sans fade" x="60" y="43" fill="#B47F56" font-size="11" font-weight="700" letter-spacing="2.5" style="animation-delay:.1s">
+      &lt;/&gt; PYTHON  ·  BACKEND  ·  AI DEVELOPER
     </text>
+    <rect x="60" y="53" width="38" height="2.5" rx="1.25" fill="#D5CB73">
+      <animate attributeName="width" values="12;38;12" dur="4s" repeatCount="indefinite"/>
+    </rect>
 
-    <!-- Name: one element per letter, fixed pitch so the stagger stays aligned -->
+    <!-- Animated name, carefully spaced -->
     <g class="mono">
-      <text class="letter" style="--i:0"  x="77"  y="122">S</text>
-      <text class="letter" style="--i:1"  x="111" y="122">W</text>
-      <text class="letter" style="--i:2"  x="145" y="122">A</text>
-      <text class="letter" style="--i:3"  x="179" y="122">R</text>
-      <text class="letter" style="--i:4"  x="213" y="122">U</text>
-      <text class="letter" style="--i:5"  x="247" y="122">P</text>
-
-      <text class="letter" style="--i:7"  x="315" y="122">K</text>
-      <text class="letter" style="--i:8"  x="349" y="122">A</text>
-      <text class="letter" style="--i:9"  x="383" y="122">R</text>
-
-      <text class="letter" style="--i:11" x="451" y="122">C</text>
-      <text class="letter" style="--i:12" x="485" y="122">H</text>
-      <text class="letter" style="--i:13" x="519" y="122">A</text>
-      <text class="letter" style="--i:14" x="553" y="122">U</text>
-      <text class="letter" style="--i:15" x="587" y="122">D</text>
-      <text class="letter" style="--i:16" x="621" y="122">H</text>
-      <text class="letter" style="--i:17" x="655" y="122">U</text>
-      <text class="letter" style="--i:18" x="689" y="122">R</text>
-      <text class="letter" style="--i:19" x="723" y="122">I</text>
+      <text class="letter" style="--i:0" x="73" y="105">S</text>
+      <text class="letter" style="--i:1" x="99" y="105">W</text>
+      <text class="letter" style="--i:2" x="125" y="105">A</text>
+      <text class="letter" style="--i:3" x="151" y="105">R</text>
+      <text class="letter" style="--i:4" x="177" y="105">U</text>
+      <text class="letter" style="--i:5" x="203" y="105">P</text>
+      <text class="letter" style="--i:7" x="255" y="105">K</text>
+      <text class="letter" style="--i:8" x="281" y="105">A</text>
+      <text class="letter" style="--i:9" x="307" y="105">R</text>
+      <text class="letter" style="--i:11" x="359" y="105">C</text>
+      <text class="letter" style="--i:12" x="385" y="105">H</text>
+      <text class="letter" style="--i:13" x="411" y="105">A</text>
+      <text class="letter" style="--i:14" x="437" y="105">U</text>
+      <text class="letter" style="--i:15" x="463" y="105">D</text>
+      <text class="letter" style="--i:16" x="489" y="105">H</text>
+      <text class="letter" style="--i:17" x="515" y="105">U</text>
+      <text class="letter" style="--i:18" x="541" y="105">R</text>
+      <text class="letter" style="--i:19" x="567" y="105">I</text>
     </g>
 
-    <!-- Underline draws in after the name lands -->
-    <path class="underline" d="M60 144 H740" pathLength="1" fill="none" stroke="url(#line)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Underline with moving highlight -->
+    <path d="M60 119H590" stroke="#405F4F" stroke-width="1.2"/>
+    <path class="underline" d="M60 119H590" pathLength="1" fill="none" stroke="url(#line)" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cy="119" r="2.7" fill="#D5CB73" filter="url(#glow)">
+      <animate attributeName="cx" values="60;590;60" dur="5.8s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- Description -->
-    <text class="sans fade" x="60" y="178" fill="#9DB5A8" font-size="16" style="animation-delay:1.9s">
+    <text class="sans fade" x="60" y="148" fill="#EFEBD6" font-size="15" style="animation-delay:1.5s">
       Building backend services and AI applications.
     </text>
+    <text class="mono fade" x="60" y="169" fill="#D5CB73" font-size="9.5" style="animation-delay:1.8s">
+      DESIGN → BUILD → TEST → IMPROVE
+    </text>
 
-    <!-- Tech tags -->
-    <g class="mono fade" font-size="11" font-weight="600" style="animation-delay:2.2s">
-      <rect x="60"  y="196" width="76" height="26" rx="6" fill="#134045" stroke="#405F4F"/>
-      <text x="98"  y="213" fill="#D5CB73" text-anchor="middle">PYTHON</text>
-
-      <rect x="146" y="196" width="80" height="26" rx="6" fill="#134045" stroke="#405F4F"/>
-      <text x="186" y="213" fill="#D5CB73" text-anchor="middle">FASTAPI</text>
-
-      <rect x="236" y="196" width="100" height="26" rx="6" fill="#134045" stroke="#405F4F"/>
-      <text x="286" y="213" fill="#D5CB73" text-anchor="middle">GENAI / RAG</text>
+    <!-- Technology tags with gentle motion -->
+    <g class="mono fade" font-size="10" font-weight="700" style="animation-delay:2s">
+      <g class="float1">
+        <rect x="60" y="185" width="78" height="25" rx="6" fill="#134045" stroke="#405F4F"/>
+        <text x="99" y="201" fill="#D5CB73" text-anchor="middle">PYTHON</text>
+      </g>
+      <g class="float2">
+        <rect x="146" y="185" width="78" height="25" rx="6" fill="#134045" stroke="#405F4F"/>
+        <text x="185" y="201" fill="#EFEBD6" text-anchor="middle">FASTAPI</text>
+      </g>
+      <g class="float1">
+        <rect x="232" y="185" width="106" height="25" rx="6" fill="#134045" stroke="#405F4F"/>
+        <text x="285" y="201" fill="#B47F56" text-anchor="middle">GENAI / RAG</text>
+      </g>
     </g>
 
-    <!-- Palette strip along the bottom edge -->
+    <text class="mono fade" x="60" y="235" fill="#85665E" font-size="10" style="animation-delay:2.2s">
+      $ keep_learning()<tspan class="blink" fill="#D5CB73">_</tspan>
+    </text>
+
+    <!-- Compact 2D AI solar system in the right corner -->
+    <g id="aiSolarSystem">
+      <ellipse cx="870" cy="130" rx="115" ry="82" fill="none" stroke="#405F4F" stroke-width="1" opacity=".45"/>
+      <ellipse cx="870" cy="130" rx="92" ry="60" fill="none" stroke="#405F4F" stroke-width="1" stroke-dasharray="3 5" opacity=".8"/>
+      <ellipse cx="870" cy="130" rx="66" ry="39" fill="none" stroke="#B47F56" stroke-width="1" opacity=".55" transform="rotate(-22 870 130)"/>
+      <ellipse cx="870" cy="130" rx="48" ry="26" fill="none" stroke="#D5CB73" stroke-width="1" opacity=".65" transform="rotate(24 870 130)"/>
+
+      <!-- Core -->
+      <circle cx="870" cy="130" r="29" fill="url(#aiCore)" stroke="#D5CB73" stroke-width="1.4" class="pulse"/>
+      <circle cx="870" cy="130" r="22" fill="none" stroke="#405F4F" stroke-width="1"/>
+      <text class="mono pulse" x="870" y="135" text-anchor="middle" fill="#EFEBD6" font-size="17" font-weight="700">AI</text>
+
+      <!-- Orbiting planets stay within the right-side solar-system region -->
+      <g class="orbitA">
+        <circle cx="870" cy="91" r="12" fill="#134045" stroke="#D5CB73" stroke-width="1.4"/>
+        <text class="mono" x="870" y="94.5" text-anchor="middle" fill="#EFEBD6" font-size="7.5" font-weight="700">PY</text>
+      </g>
+      <g class="orbitB">
+        <circle cx="935" cy="130" r="12" fill="#134045" stroke="#B47F56" stroke-width="1.4"/>
+        <text class="mono" x="935" y="133.5" text-anchor="middle" fill="#EFEBD6" font-size="7.5" font-weight="700">ML</text>
+      </g>
+      <g class="orbitC">
+        <circle cx="870" cy="174" r="12" fill="#134045" stroke="#D5CB73" stroke-width="1.4"/>
+        <text class="mono" x="870" y="177.5" text-anchor="middle" fill="#EFEBD6" font-size="6.5" font-weight="700">LLM</text>
+      </g>
+      <g class="orbitB">
+        <circle cx="805" cy="130" r="12" fill="#134045" stroke="#405F4F" stroke-width="1.4"/>
+        <text class="mono" x="805" y="133.5" text-anchor="middle" fill="#EFEBD6" font-size="7" font-weight="700">RAG</text>
+      </g>
+      <g class="orbitA">
+        <circle cx="916" cy="75" r="10" fill="#405F4F" stroke="#B47F56" stroke-width="1.2"/>
+        <text class="mono" x="916" y="78.5" text-anchor="middle" fill="#EFEBD6" font-size="6.2" font-weight="700">GEN</text>
+      </g>
+      <g class="orbitC">
+        <circle cx="822" cy="185" r="10" fill="#405F4F" stroke="#B47F56" stroke-width="1.2"/>
+        <text class="mono" x="822" y="188.5" text-anchor="middle" fill="#EFEBD6" font-size="6.5" font-weight="700">API</text>
+      </g>
+
+      <!-- Orbiting spark -->
+      <g class="orbitB">
+        <circle cx="870" cy="47" r="2.3" fill="#D5CB73" filter="url(#glow)"/>
+      </g>
+    </g>
+
+    <!-- Palette strip -->
     <g>
-      <rect x="0"     y="256" width="167" height="4" fill="#001F31"/>
-      <rect x="167"   y="256" width="167" height="4" fill="#134045"/>
-      <rect x="334"   y="256" width="166" height="4" fill="#405F4F"/>
-      <rect x="500"   y="256" width="167" height="4" fill="#D5CB73"/>
-      <rect x="667"   y="256" width="167" height="4" fill="#B47F56"/>
-      <rect x="834"   y="256" width="166" height="4" fill="#85665E"/>
+      <rect x="0" y="256" width="167" height="4" fill="#001F31"/>
+      <rect x="167" y="256" width="167" height="4" fill="#134045"/>
+      <rect x="334" y="256" width="166" height="4" fill="#405F4F"/>
+      <rect x="500" y="256" width="167" height="4" fill="#D5CB73"/>
+      <rect x="667" y="256" width="167" height="4" fill="#B47F56"/>
+      <rect x="834" y="256" width="166" height="4" fill="#85665E"/>
     </g>
   </g>
 
-  <rect x=".5" y=".5" width="999" height="259" rx="15.5" fill="none" stroke="#405F4F" opacity=".7"/>
+  <rect x=".5" y=".5" width="999" height="259" rx="15.5" fill="none" stroke="#405F4F" opacity=".8"/>
 </svg>
