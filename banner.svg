@@ -2,9 +2,9 @@
 <title id="title">Swarup Kar Chaudhuri — Python, Backend and AI Developer</title>
 <desc id="desc">Animated developer banner with a staggered name reveal, glowing moving underline, floating technology pills, orbiting accents and a blinking code cursor.</desc>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00131f"/><stop offset=".6" stop-color="#002b35"/><stop offset="1" stop-color="#103b3b"/></linearGradient>
-<linearGradient id="neon"><stop stop-color="#d5cb73"/><stop offset=".5" stop-color="#53e6dc"/><stop offset="1" stop-color="#b47f56"/></linearGradient>
-<pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#5b8980" stroke-width=".5" opacity=".22"/></pattern>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#001F31"/><stop offset=".6" stop-color="#134045"/><stop offset="1" stop-color="#405F4F"/></linearGradient>
+<linearGradient id="neon"><stop stop-color="#d5cb73"/><stop offset=".5" stop-color="#D5CB73"/><stop offset="1" stop-color="#b47f56"/></linearGradient>
+<pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#405F4F" stroke-width=".5" opacity=".22"/></pattern>
 <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <clipPath id="card"><rect width="1000" height="260" rx="16"/></clipPath>
 </defs>
@@ -12,7 +12,7 @@
 .sans{font-family:Inter,'Segoe UI',Arial,sans-serif}.mono{font-family:'JetBrains Mono',Consolas,monospace}
 .letter{font-family:'JetBrains Mono',Consolas,monospace;font-size:35px;font-weight:700;text-anchor:middle;fill:#f0eedb;opacity:0;animation:enter .7s cubic-bezier(.2,.8,.2,1) forwards,glint 7s ease-in-out infinite;animation-delay:var(--d),calc(2.7s + var(--p))}
 @keyframes enter{from{opacity:0;transform:translateY(18px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
-@keyframes glint{0%,85%,100%{fill:#f0eedb}5%{fill:#d5cb73}12%{fill:#53e6dc}}
+@keyframes glint{0%,85%,100%{fill:#f0eedb}5%{fill:#d5cb73}12%{fill:#D5CB73}}
 .fade{opacity:0;animation:fade .8s ease-out forwards}@keyframes fade{to{opacity:1}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .orbit{transform-origin:865px 126px;animation:spin 25s linear infinite}.reverse{transform-origin:865px 126px;animation:spin 36s linear infinite reverse}
@@ -21,36 +21,40 @@
 </style>
 <g clip-path="url(#card)">
 <rect width="1000" height="260" fill="url(#bg)"/><rect width="1000" height="260" fill="url(#grid)"/>
-<ellipse cx="245" cy="110" rx="370" ry="240" fill="#1dd6c5" opacity=".055"/>
-<ellipse cx="860" cy="125" rx="220" ry="180" fill="#1dd6c5" opacity=".06"/>
+<ellipse cx="245" cy="110" rx="370" ry="240" fill="#134045" opacity=".055"/>
+<ellipse cx="860" cy="125" rx="220" ry="180" fill="#134045" opacity=".06"/>
 <rect width="1000" height="3" fill="url(#neon)"/>
 <rect width="1000" height="260" fill="url(#neon)" opacity=".07"><animate attributeName="y" values="-260;260;-260" dur="9s" repeatCount="indefinite"/></rect>
-<g fill="#53e6dc" filter="url(#glow)"><circle cx="480" cy="35" r="2"><animate attributeName="cy" values="35;49;35" dur="4s" repeatCount="indefinite"/></circle><circle cx="515" cy="208" r="1.5"><animate attributeName="opacity" values=".15;1;.15" dur="2.8s" repeatCount="indefinite"/></circle><circle cx="970" cy="42" r="2"><animate attributeName="cy" values="42;55;42" dur="3.4s" repeatCount="indefinite"/></circle></g>
-<text class="sans fade" x="58" y="42" fill="#b8a967" font-size="10" font-weight="700" letter-spacing="2.4" style="animation-delay:.1s">&lt;/&gt;  PYTHON  ·  BACKEND  ·  AI  ·  BUILD  ·  LEARN</text>
+<g fill="#D5CB73" filter="url(#glow)"><circle cx="480" cy="35" r="2"><animate attributeName="cy" values="35;49;35" dur="4s" repeatCount="indefinite"/></circle><circle cx="515" cy="208" r="1.5"><animate attributeName="opacity" values=".15;1;.15" dur="2.8s" repeatCount="indefinite"/></circle><circle cx="970" cy="42" r="2"><animate attributeName="cy" values="42;55;42" dur="3.4s" repeatCount="indefinite"/></circle></g>
+<text class="sans fade" x="58" y="42" fill="#D5CB73" font-size="10" font-weight="700" letter-spacing="2.4" style="animation-delay:.1s">&lt;/&gt;  PYTHON  ·  BACKEND  ·  AI  ·  BUILD  ·  LEARN</text>
 <rect x="58" y="54" width="42" height="3" rx="1.5" fill="url(#neon)"><animate attributeName="width" values="14;42;14" dur="4s" repeatCount="indefinite"/></rect>
 <g>
-<!-- Staggered entrance and repeating color shimmer for every letter of the full name. -->
+<!-- Repeating typewriter-style reveal for every letter of the full name. -->
 <text class="letter" style="--d:.20s;--p:0s" x="75" y="105">S</text><text class="letter" style="--d:.25s;--p:.08s" x="101" y="105">W</text><text class="letter" style="--d:.30s;--p:.16s" x="127" y="105">A</text><text class="letter" style="--d:.35s;--p:.24s" x="153" y="105">R</text><text class="letter" style="--d:.40s;--p:.32s" x="179" y="105">U</text><text class="letter" style="--d:.45s;--p:.40s" x="205" y="105">P</text>
 <text class="letter" style="--d:.60s;--p:.48s" x="257" y="105">K</text><text class="letter" style="--d:.65s;--p:.56s" x="283" y="105">A</text><text class="letter" style="--d:.70s;--p:.64s" x="309" y="105">R</text>
 <text class="letter" style="--d:.85s;--p:.72s" x="361" y="105">C</text><text class="letter" style="--d:.90s;--p:.80s" x="387" y="105">H</text><text class="letter" style="--d:.95s;--p:.88s" x="413" y="105">A</text><text class="letter" style="--d:1.00s;--p:.96s" x="439" y="105">U</text><text class="letter" style="--d:1.05s;--p:1.04s" x="465" y="105">D</text><text class="letter" style="--d:1.10s;--p:1.12s" x="491" y="105">H</text><text class="letter" style="--d:1.15s;--p:1.20s" x="517" y="105">U</text><text class="letter" style="--d:1.20s;--p:1.28s" x="543" y="105">R</text><text class="letter" style="--d:1.25s;--p:1.36s" x="569" y="105">I</text>
 </g>
-<path d="M58 119H602" stroke="#41645e" stroke-width="1.5"/><path d="M58 119H602" stroke="url(#neon)" stroke-width="2.5" stroke-dasharray="544" stroke-dashoffset="544" filter="url(#glow)"><animate attributeName="stroke-dashoffset" values="544;0;0;544" keyTimes="0;.28;.78;1" dur="7s" repeatCount="indefinite"/></path>
+<path d="M58 119H602" stroke="#405F4F" stroke-width="1.5"/>
+<rect id="typeCursor" x="66" y="77" width="3" height="34" rx="1.5" fill="#D5CB73" filter="url(#glow)">
+  <animate attributeName="x" values="66;218;244;322;348;608;66;66" keyTimes="0;.23;.25;.36;.38;.70;.88;1" dur="6.8s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="1;1;0;1;1;1;0;1" dur="1s" repeatCount="indefinite"/>
+</rect><path d="M58 119H602" stroke="url(#neon)" stroke-width="2.5" stroke-dasharray="544" stroke-dashoffset="544" filter="url(#glow)"><animate attributeName="stroke-dashoffset" values="544;0;0;544" keyTimes="0;.28;.78;1" dur="7s" repeatCount="indefinite"/></path>
 <circle cy="119" r="3.5" fill="#d5cb73" filter="url(#glow)"><animate attributeName="cx" values="58;602;602;58" keyTimes="0;.28;.78;1" dur="7s" repeatCount="indefinite"/></circle>
-<text class="sans fade" x="58" y="151" fill="#b7cec8" font-size="15" style="animation-delay:1.8s">Building backend services and AI applications.</text>
-<text class="mono fade" x="58" y="174" fill="#759e99" font-size="10" style="animation-delay:2s">DESIGN → BUILD → TEST → IMPROVE</text>
+<text class="sans fade" x="58" y="151" fill="#EFEBD6" font-size="15" style="animation-delay:1.8s">Building backend services and AI applications.</text>
+<text class="mono fade" x="58" y="174" fill="#85665E" font-size="10" style="animation-delay:2s">DESIGN → BUILD → TEST → IMPROVE</text>
 <g class="mono fade" font-size="10" font-weight="700" style="animation-delay:2.1s">
-<g><rect x="58" y="190" width="78" height="25" rx="7" fill="#0d3338" stroke="#347a75"/><text x="97" y="206" fill="#d5cb73" text-anchor="middle">PYTHON</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="4s" repeatCount="indefinite"/></g>
-<g><rect x="145" y="190" width="78" height="25" rx="7" fill="#0d3338" stroke="#347a75"/><text x="184" y="206" fill="#8cf0e4" text-anchor="middle">FASTAPI</text><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="4.5s" repeatCount="indefinite"/></g>
-<g><rect x="232" y="190" width="104" height="25" rx="7" fill="#0d3338" stroke="#347a75"/><text x="284" y="206" fill="#d7b4ff" text-anchor="middle">GENAI / RAG</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="3.7s" repeatCount="indefinite"/></g>
+<g><rect x="58" y="190" width="78" height="25" rx="7" fill="#134045" stroke="#405F4F"/><text x="97" y="206" fill="#d5cb73" text-anchor="middle">PYTHON</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="4s" repeatCount="indefinite"/></g>
+<g><rect x="145" y="190" width="78" height="25" rx="7" fill="#134045" stroke="#405F4F"/><text x="184" y="206" fill="#EFEBD6" text-anchor="middle">FASTAPI</text><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="4.5s" repeatCount="indefinite"/></g>
+<g><rect x="232" y="190" width="104" height="25" rx="7" fill="#134045" stroke="#405F4F"/><text x="284" y="206" fill="#B47F56" text-anchor="middle">GENAI / RAG</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="3.7s" repeatCount="indefinite"/></g>
 </g>
-<text class="mono fade" x="58" y="240" fill="#6f9890" font-size="10" style="animation-delay:2.4s">$ keep_learning()<tspan fill="#d5cb73">_</tspan><animate attributeName="opacity" values="1;.55;1" dur="1.5s" repeatCount="indefinite"/></text>
-<g fill="none" stroke="#4c8077"><circle cx="865" cy="126" r="48" opacity=".6"/><circle cx="865" cy="126" r="75" opacity=".42" stroke-dasharray="2 7"/><ellipse cx="865" cy="126" rx="108" ry="34" opacity=".7" transform="rotate(-24 865 126)"/></g>
-<g class="orbit"><circle cx="973" cy="126" r="3.5" fill="#d5cb73" filter="url(#glow)"/></g><g class="reverse"><circle cx="865" cy="51" r="3" fill="#53e6dc" filter="url(#glow)"/></g>
-<circle cx="865" cy="126" r="25" fill="#082b32" stroke="#347a75"/><text class="mono" x="865" y="131" fill="#8cf0e4" font-size="14" font-weight="700" text-anchor="middle">AI</text>
-<g><rect x="781" y="76" width="65" height="24" rx="12" fill="#0d3338" stroke="#347a75"/><text class="mono" x="813.5" y="92" fill="#d5cb73" font-size="9" text-anchor="middle">PYTHON</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4s" repeatCount="indefinite"/></g>
-<g><rect x="884" y="164" width="82" height="24" rx="12" fill="#0d3338" stroke="#347a75"/><text class="mono" x="925" y="180" fill="#8cf0e4" font-size="9" text-anchor="middle">LLM / RAG</text><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="4.7s" repeatCount="indefinite"/></g>
-<rect x="628" y="201" width="318" height="36" rx="8" fill="#061b23" stroke="#35675f"/>
-<circle cx="643" cy="213" r="3" fill="#ff7b72"/><circle cx="653" cy="213" r="3" fill="#d5cb73"/><circle cx="663" cy="213" r="3" fill="#53e6dc"/>
-<text class="mono" x="678" y="216" fill="#7b9e9b" font-size="9">main.py</text><text class="mono" x="643" y="229" fill="#b6d8d2" font-size="10">build(</text><text class="mono" x="679" y="229" fill="#8cf0e4" font-size="10">"something useful"</text><text class="mono" x="801" y="229" fill="#b6d8d2" font-size="10">)</text><rect class="cursor" x="810" y="220" width="2" height="12" rx="1" fill="#d5cb73"/>
-<rect x=".5" y=".5" width="999" height="259" rx="15.5" fill="none" stroke="#47756c" opacity=".8"/>
+<text class="mono fade" x="58" y="240" fill="#85665E" font-size="10" style="animation-delay:2.4s">$ keep_learning()<tspan fill="#d5cb73">_</tspan><animate attributeName="opacity" values="1;.55;1" dur="1.5s" repeatCount="indefinite"/></text>
+<g fill="none" stroke="#405F4F"><circle cx="865" cy="126" r="48" opacity=".6"/><circle cx="865" cy="126" r="75" opacity=".42" stroke-dasharray="2 7"/><ellipse cx="865" cy="126" rx="108" ry="34" opacity=".7" transform="rotate(-24 865 126)"/></g>
+<g class="orbit"><circle cx="973" cy="126" r="3.5" fill="#d5cb73" filter="url(#glow)"/></g><g class="reverse"><circle cx="865" cy="51" r="3" fill="#D5CB73" filter="url(#glow)"/></g>
+<circle cx="865" cy="126" r="25" fill="#001F31" stroke="#405F4F"/><text class="mono" x="865" y="131" fill="#EFEBD6" font-size="14" font-weight="700" text-anchor="middle">AI</text>
+<g><rect x="781" y="76" width="65" height="24" rx="12" fill="#134045" stroke="#405F4F"/><text class="mono" x="813.5" y="92" fill="#d5cb73" font-size="9" text-anchor="middle">PYTHON</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4s" repeatCount="indefinite"/></g>
+<g><rect x="884" y="164" width="82" height="24" rx="12" fill="#134045" stroke="#405F4F"/><text class="mono" x="925" y="180" fill="#EFEBD6" font-size="9" text-anchor="middle">LLM / RAG</text><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="4.7s" repeatCount="indefinite"/></g>
+<rect x="628" y="201" width="318" height="36" rx="8" fill="#001F31" stroke="#405F4F"/>
+<circle cx="643" cy="213" r="3" fill="#ff7b72"/><circle cx="653" cy="213" r="3" fill="#d5cb73"/><circle cx="663" cy="213" r="3" fill="#D5CB73"/>
+<text class="mono" x="678" y="216" fill="#7b9e9b" font-size="9">main.py</text><text class="mono" x="643" y="229" fill="#b6d8d2" font-size="10">build(</text><text class="mono" x="679" y="229" fill="#EFEBD6" font-size="10">"something useful"</text><text class="mono" x="801" y="229" fill="#b6d8d2" font-size="10">)</text><rect class="cursor" x="810" y="220" width="2" height="12" rx="1" fill="#d5cb73"/>
+<rect x=".5" y=".5" width="999" height="259" rx="15.5" fill="none" stroke="#405F4F" opacity=".8"/>
 </g></svg>
