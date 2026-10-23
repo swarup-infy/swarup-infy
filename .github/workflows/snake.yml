@@ -26,6 +26,9 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Make generated SVGs writable
+        run: sudo chmod -R a+rwX dist
+
       - name: Tune snake speed
         run: python .github/scripts/retime_snake.py
 
