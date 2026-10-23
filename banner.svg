@@ -139,48 +139,73 @@
       $ keep_learning()<tspan class="blink" fill="#D5CB73">_</tspan>
     </text>
 
-    <!-- Compact 2D AI solar system in the right corner -->
+    <!-- 2D AI solar system: elliptical orbital paths and upright orbiting tech planets -->
     <g id="aiSolarSystem">
-      <ellipse cx="870" cy="130" rx="115" ry="82" fill="none" stroke="#405F4F" stroke-width="1" opacity=".45"/>
-      <ellipse cx="870" cy="130" rx="92" ry="60" fill="none" stroke="#405F4F" stroke-width="1" stroke-dasharray="3 5" opacity=".8"/>
-      <ellipse cx="870" cy="130" rx="66" ry="39" fill="none" stroke="#B47F56" stroke-width="1" opacity=".55" transform="rotate(-22 870 130)"/>
-      <ellipse cx="870" cy="130" rx="48" ry="26" fill="none" stroke="#D5CB73" stroke-width="1" opacity=".65" transform="rotate(24 870 130)"/>
+      <!-- Deep-space halo and orbital rings -->
+      <circle cx="862" cy="130" r="113" fill="#001F31" opacity=".38"/>
+      <ellipse cx="862" cy="130" rx="124" ry="76" fill="none" stroke="#405F4F" stroke-width="1" opacity=".65" transform="rotate(-12 862 130)"/>
+      <ellipse cx="862" cy="130" rx="103" ry="61" fill="none" stroke="#B47F56" stroke-width="1" stroke-dasharray="3 5" opacity=".85" transform="rotate(18 862 130)"/>
+      <ellipse cx="862" cy="130" rx="78" ry="43" fill="none" stroke="#D5CB73" stroke-width="1" opacity=".72" transform="rotate(-20 862 130)"/>
+      <ellipse cx="862" cy="130" rx="55" ry="29" fill="none" stroke="#405F4F" stroke-width="1.2" opacity=".95" transform="rotate(25 862 130)"/>
 
-      <!-- Core -->
-      <circle cx="870" cy="130" r="29" fill="url(#aiCore)" stroke="#D5CB73" stroke-width="1.4" class="pulse"/>
-      <circle cx="870" cy="130" r="22" fill="none" stroke="#405F4F" stroke-width="1"/>
-      <text class="mono pulse" x="870" y="135" text-anchor="middle" fill="#EFEBD6" font-size="17" font-weight="700">AI</text>
+      <!-- Central AI star -->
+      <circle cx="862" cy="130" r="32" fill="#134045" stroke="#D5CB73" stroke-width="1.5" class="pulse"/>
+      <circle cx="862" cy="130" r="25" fill="none" stroke="#B47F56" stroke-width="1" opacity=".9"/>
+      <circle cx="862" cy="130" r="19" fill="#001F31" stroke="#405F4F" stroke-width="1"/>
+      <text class="mono pulse" x="862" y="136" text-anchor="middle" fill="#D5CB73" font-size="18" font-weight="700">AI</text>
+      <circle cx="862" cy="94" r="2.5" fill="#D5CB73" filter="url(#glow)">
+        <animate attributeName="opacity" values=".35;1;.35" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
 
-      <!-- Orbiting planets stay within the right-side solar-system region -->
-      <g class="orbitA">
-        <circle cx="870" cy="91" r="12" fill="#134045" stroke="#D5CB73" stroke-width="1.4"/>
-        <text class="mono" x="870" y="94.5" text-anchor="middle" fill="#EFEBD6" font-size="7.5" font-weight="700">PY</text>
+      <!-- Orbit 1 -->
+      <g>
+        <g>
+          <circle r="14" fill="#134045" stroke="#D5CB73" stroke-width="1.5"/>
+          <circle r="9.5" fill="none" stroke="#405F4F" stroke-width="1"/>
+          <text class="mono" y="2.8" text-anchor="middle" fill="#EFEBD6" font-size="7" font-weight="700">PY</text>
+          <animateMotion dur="12s" repeatCount="indefinite" path="M 862 130 m -55 0 a 55 29 0 1 0 110 0 a 55 29 0 1 0 -110 0"/>
+        </g>
       </g>
-      <g class="orbitB">
-        <circle cx="935" cy="130" r="12" fill="#134045" stroke="#B47F56" stroke-width="1.4"/>
-        <text class="mono" x="935" y="133.5" text-anchor="middle" fill="#EFEBD6" font-size="7.5" font-weight="700">ML</text>
+      <g>
+        <circle r="12" fill="#134045" stroke="#B47F56" stroke-width="1.5"/>
+        <text class="mono" y="2.5" text-anchor="middle" fill="#EFEBD6" font-size="6.5" font-weight="700">LLM</text>
+        <animateMotion dur="10s" repeatCount="indefinite" path="M 862 130 m -78 0 a 78 43 0 1 1 156 0 a 78 43 0 1 1 -156 0"/>
       </g>
-      <g class="orbitC">
-        <circle cx="870" cy="174" r="12" fill="#134045" stroke="#D5CB73" stroke-width="1.4"/>
-        <text class="mono" x="870" y="177.5" text-anchor="middle" fill="#EFEBD6" font-size="6.5" font-weight="700">LLM</text>
+      <g>
+        <circle r="12" fill="#405F4F" stroke="#D5CB73" stroke-width="1.4"/>
+        <text class="mono" y="2.5" text-anchor="middle" fill="#EFEBD6" font-size="6.5" font-weight="700">RAG</text>
+        <animateMotion dur="15s" repeatCount="indefinite" path="M 862 130 m -103 0 a 103 61 0 1 0 206 0 a 103 61 0 1 0 -206 0"/>
       </g>
-      <g class="orbitB">
-        <circle cx="805" cy="130" r="12" fill="#134045" stroke="#405F4F" stroke-width="1.4"/>
-        <text class="mono" x="805" y="133.5" text-anchor="middle" fill="#EFEBD6" font-size="7" font-weight="700">RAG</text>
+      <g>
+        <circle r="12" fill="#134045" stroke="#B47F56" stroke-width="1.4"/>
+        <text class="mono" y="2.5" text-anchor="middle" fill="#EFEBD6" font-size="7" font-weight="700">ML</text>
+        <animateMotion dur="18s" repeatCount="indefinite" path="M 862 130 m -124 0 a 124 76 0 1 1 248 0 a 124 76 0 1 1 -248 0"/>
       </g>
-      <g class="orbitA">
-        <circle cx="916" cy="75" r="10" fill="#405F4F" stroke="#B47F56" stroke-width="1.2"/>
-        <text class="mono" x="916" y="78.5" text-anchor="middle" fill="#EFEBD6" font-size="6.2" font-weight="700">GEN</text>
+      <g>
+        <circle r="10" fill="#405F4F" stroke="#D5CB73" stroke-width="1.3"/>
+        <text class="mono" y="2.2" text-anchor="middle" fill="#EFEBD6" font-size="5.8" font-weight="700">GEN</text>
+        <animateMotion dur="13s" repeatCount="indefinite" path="M 862 130 m -88 -52 a 88 52 0 1 0 176 0 a 88 52 0 1 0 -176 0"/>
       </g>
-      <g class="orbitC">
-        <circle cx="822" cy="185" r="10" fill="#405F4F" stroke="#B47F56" stroke-width="1.2"/>
-        <text class="mono" x="822" y="188.5" text-anchor="middle" fill="#EFEBD6" font-size="6.5" font-weight="700">API</text>
+      <g>
+        <circle r="10" fill="#134045" stroke="#B47F56" stroke-width="1.3"/>
+        <text class="mono" y="2.2" text-anchor="middle" fill="#EFEBD6" font-size="6" font-weight="700">DB</text>
+        <animateMotion dur="16s" repeatCount="indefinite" path="M 862 130 m -112 0 a 112 68 0 1 1 224 0 a 112 68 0 1 1 -224 0"/>
+      </g>
+      <g>
+        <circle r="9" fill="#405F4F" stroke="#D5CB73" stroke-width="1.2"/>
+        <text class="mono" y="2.2" text-anchor="middle" fill="#EFEBD6" font-size="5.5" font-weight="700">NLP</text>
+        <animateMotion dur="20s" repeatCount="indefinite" path="M 862 130 m -68 -37 a 68 37 0 1 0 136 0 a 68 37 0 1 0 -136 0"/>
+      </g>
+      <g>
+        <circle r="9" fill="#134045" stroke="#B47F56" stroke-width="1.2"/>
+        <text class="mono" y="2.2" text-anchor="middle" fill="#EFEBD6" font-size="6" font-weight="700">DL</text>
+        <animateMotion dur="14s" repeatCount="indefinite" path="M 862 130 m -94 0 a 94 55 0 1 1 188 0 a 94 55 0 1 1 -188 0"/>
       </g>
 
-      <!-- Orbiting spark -->
-      <g class="orbitB">
-        <circle cx="870" cy="47" r="2.3" fill="#D5CB73" filter="url(#glow)"/>
-      </g>
+      <!-- A few softly pulsing stars -->
+      <circle cx="752" cy="75" r="1.6" fill="#D5CB73" class="pulse"/>
+      <circle cx="967" cy="171" r="1.5" fill="#B47F56" class="pulse"/>
+      <circle cx="948" cy="64" r="1.3" fill="#D5CB73" class="pulse"/>
     </g>
 
     <!-- Palette strip -->
