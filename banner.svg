@@ -10,9 +10,8 @@
 </defs>
 <style>
 .sans{font-family:Inter,'Segoe UI',Arial,sans-serif}.mono{font-family:'JetBrains Mono',Consolas,monospace}
-.letter{font-family:'JetBrains Mono',Consolas,monospace;font-size:35px;font-weight:700;text-anchor:middle;fill:#f0eedb;opacity:0;animation:enter .7s cubic-bezier(.2,.8,.2,1) forwards,glint 7s ease-in-out infinite;animation-delay:var(--d),calc(2.7s + var(--p))}
-@keyframes enter{from{opacity:0;transform:translateY(18px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
-@keyframes glint{0%,85%,100%{fill:#f0eedb}5%{fill:#d5cb73}12%{fill:#D5CB73}}
+.letter{font-family:'JetBrains Mono',Consolas,monospace;font-size:35px;font-weight:700;text-anchor:middle;fill:#EFEBD6;opacity:0;animation:typeOn 6.8s steps(1,end) infinite;animation-delay:var(--d)}
+@keyframes typeOn{0%,5%{opacity:0;filter:blur(2px)}7%,82%{opacity:1;filter:blur(0)}90%,100%{opacity:0;filter:blur(1px)}}
 .fade{opacity:0;animation:fade .8s ease-out forwards}@keyframes fade{to{opacity:1}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .orbit{transform-origin:865px 126px;animation:spin 25s linear infinite}.reverse{transform-origin:865px 126px;animation:spin 36s linear infinite reverse}
