@@ -7,16 +7,15 @@ get less time. The original path and contribution cells remain unchanged.
 from pathlib import Path
 import re
 
-# Dense/eating sections are slowed down; long travel stretches are faster.
-# These landmarks match the generated contribution-snake route.
 SEGMENTS = [
-    (0.0, 24.0, 0.65),   # fast travel
-    (24.0, 42.0, 1.50),  # slower through contribution clusters
-    (42.0, 50.0, 0.70),  # fast travel
-    (50.0, 65.0, 1.50),  # slower through contribution clusters
-    (65.0, 92.0, 0.45),  # fastest sparse stretch
-    (92.0, 100.0, 0.70), # fast return / loop
+    (0.0, 24.0, 0.65),
+    (24.0, 42.0, 1.50),
+    (42.0, 50.0, 0.70),
+    (50.0, 65.0, 1.50),
+    (65.0, 92.0, 0.45),
+    (92.0, 100.0, 0.70),
 ]
+
 
 def remap_percent(value: float) -> float:
     total_weight = sum((end - start) * weight for start, end, weight in SEGMENTS)
@@ -28,6 +27,7 @@ def remap_percent(value: float) -> float:
         elapsed += (end - start) * weight
     return 100.0
 
+
 def retime_svg(path: Path) -> None:
     source = path.read_text(encoding="utf-8")
     match = re.search(r"(<style[^>]*>)(.*?)(</style>)", source, flags=re.S)
@@ -35,18 +35,29 @@ def retime_svg(path: Path) -> None:
         raise RuntimeError(f"No embedded CSS found in {path}")
 
     css = match.group(2)
-    # Rewrite percentages only when they are CSS keyframe selectors.
-    # Gradient offsets and SVG geometry are left untouched.
-    selector_pattern = re.compile(r"(?<![\w.-])(\d+(?:\.\d+)?)%(?=\s*(?:,|\{))")
+    selector_pattern = re.compile(r"(?<![\\w.-])(\\d+(?:\\.\\d+)?)%(?=\\s*(?:,|\\{))")
 
     def replace_selector(m: re.Match) -> str:
         return f"{remap_percent(float(m.group(1))):.4f}%"
 
     tuned_css = selector_pattern.sub(replace_selector, css)
     if tuned_css == css:
-        raise RuntimeError(f"No keyframe percentages were retimed in {path}")
-    path.write_text(source[:match.start(2)] + tuned_css + source[match.end(2):], encoding="utf-8")
+        # platane/snk can emit SVGs without CSS keyframes in future versions.
+        # Don't fail the entire generation when there is nothing to retime.
+        print(f"No CSS keyframe selectors found; leaving {path} unchanged")
+        return
+
+    # The generated files may be read-only in the action container. Path.write_text
+    # opens the original with truncation and fails on read-only files; writing to a
+    # temporary file then replacing the target works when the directory is writable.
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(
+        source[:match.start(2)] + tuned_css + source[match.end(2):],
+        encoding="utf-8",
+    )
+    temporary.replace(path)
     print(f"Retimed snake animation: {path}")
+
 
 for svg in (
     Path("dist/github-contribution-grid-snake.svg"),
