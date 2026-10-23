@@ -2,35 +2,36 @@
   <img src="https://raw.githubusercontent.com/swarup-infy/swarup-infy/main/banner.svg" alt="Swarup Kar Chaudhuri — animated Python and AI banner" width="100%">
 </p>
 
-<h3 align="center">Electrical Engineering Graduate | Aspiring Python Backend & AI Engineer</h3>
+<h3 align="center">Aspiring Python Backend & AI Engineer | Electrical Engineering Graduate</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/LLMs%20%26%20RAG-6E40C9?style=flat-square&logo=huggingface&logoColor=white" alt="LLMs and RAG">
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
 </p>
 
 ## About
 
-Hi, I'm Swarup. I'm an Electrical Engineering graduate building my skills in Python, backend development, and AI applications. I enjoy learning by building practical projects and improving them step by step.
+Hi, I'm Swarup. I'm focused on building my skills in Python, backend engineering, and AI development. I learn by building practical projects and exploring how LLMs, retrieval-augmented generation (RAG), and APIs can solve real problems.
 
 - **Currently building:** [AI Document Assistant](https://github.com/swarup-infy/AI-DOC-Assistant)
-- **Learning:** APIs, databases, RAG, and machine learning fundamentals
-- **Goal:** Grow as a Python backend / AI engineer
+- **Currently learning:** Python backend development, API design, databases, RAG, and machine learning fundamentals
+- **Career focus:** Python Backend Engineer / AI Engineer
 
 ## Featured Project
 
 ### [AI Document Assistant](https://github.com/swarup-infy/AI-DOC-Assistant)
 
-A project exploring document upload, text extraction, semantic search, and question answering with retrieval-augmented generation (RAG).
+A project for uploading documents, extracting text, searching content semantically, and answering questions with retrieval-augmented generation (RAG).
 
 **Tools:** Python · FastAPI · PostgreSQL · SQLAlchemy · ChromaDB · LLM APIs
 
 ## Tech Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,git,github,vscode,html,css&theme=dark" alt="Python, FastAPI, PostgreSQL, Git, GitHub, VS Code, HTML and CSS">
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,git,github,vscode&theme=dark" alt="Python, FastAPI, PostgreSQL, Git, GitHub and VS Code">
 </p>
 
 ## GitHub Activity
