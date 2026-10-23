@@ -16,7 +16,6 @@
 
 Hi, I'm Swarup. I'm focused on building my skills in Python, backend engineering, and AI development. I learn by building practical projects and exploring how LLMs, retrieval-augmented generation (RAG), and APIs can solve real problems.
 
-- **Currently building:** [AI Document Assistant](https://github.com/swarup-infy/AI-DOC-Assistant)
 - **Currently learning:** Python backend development, API design, databases, RAG, and machine learning fundamentals
 - **Career focus:** Python Backend Engineer / AI Engineer
 
